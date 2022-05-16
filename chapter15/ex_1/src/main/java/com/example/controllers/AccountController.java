@@ -1,6 +1,6 @@
 package com.example.controllers;
 
-import com.example.dto.TransferRequest;
+import com.example.exceptions.dto.TransferRequest;
 import com.example.model.Account;
 import com.example.services.TransferService;
 import org.springframework.web.bind.annotation.*;
