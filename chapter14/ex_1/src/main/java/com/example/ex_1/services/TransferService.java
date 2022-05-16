@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.security.auth.login.AccountNotFoundException;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -27,7 +26,7 @@ public class TransferService {
             long idSender,
             long idReceiver,
             BigDecimal amount
-    ) throws AccountNotFoundException {
+    )  {
         Account sender = accountRepository.findById(idSender)
                 .orElseThrow(AccountNotFoundException::new);
 

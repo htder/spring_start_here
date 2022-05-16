@@ -5,8 +5,6 @@ import com.example.ex_1.services.TransferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.security.auth.login.AccountNotFoundException;
-
 @RestController
 public class AccountController {
 
@@ -22,7 +20,7 @@ public class AccountController {
     @PostMapping("/transfer")
     public void transferMoney(
             @RequestBody TransferRequest request
-    ) throws AccountNotFoundException {
+    ) {
         transferService.transferMoney(
                 request.getSenderAccountId(),
                 request.getReceiverAccountId(),
